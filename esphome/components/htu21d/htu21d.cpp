@@ -40,7 +40,8 @@ void HTU21DComponent::update() {
     this->status_set_warning();
     return;
   }
-  delay(50);  // NOLINT
+  // delay(50);  // NOLINT
+  delay(75);  // NOLINT
   if (this->read(reinterpret_cast<uint8_t *>(&raw_temperature), 2) != i2c::ERROR_OK) {
     this->status_set_warning();
     return;
@@ -54,7 +55,8 @@ void HTU21DComponent::update() {
     this->status_set_warning();
     return;
   }
-  delay(50);  // NOLINT
+  // delay(50);  // NOLINT
+  delay(75);  // NOLINT
   if (this->read(reinterpret_cast<uint8_t *>(&raw_humidity), 2) != i2c::ERROR_OK) {
     this->status_set_warning();
     return;
